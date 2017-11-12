@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, url_for, redirect
 from sauceboy import get_articles
 from majesticbox import doit
+from summarise import summarise_articles
 import time
 
 #from neutralitySorter import emotionRank
@@ -36,9 +37,13 @@ def testing():
     #for url in articles_list:
     #    neutralised_list.append(emotionRank(url))
 
+    summaries = summarise_articles(trusted_articles_list)
+    del summaries[len(summaries)-1]
+
     print "######"
     print "Total time taken: " + str((time.clock() - global_start_time)) + " seconds"
     print "######"
+    print "last point: " + summaries[len(summaries)-1]
 
     #Render the page
-    return render_template("summary.html", searchterm = search_term, article_0 = trusted_articles_list[0], article_1 = trusted_articles_list[1], article_2 = trusted_articles_list[2])
+    return render_template("summary.html", searchterm = search_term, summary = summaries)

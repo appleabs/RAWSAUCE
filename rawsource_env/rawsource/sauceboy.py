@@ -7,7 +7,7 @@ def get_articles(search_term):
     articles = q.execQuery(er, sortBy = "rel", maxItems = 200 ,returnInfo = ReturnInfo())
     uri_list = []
     for article in articles:
-        uri_list.append({"url" : str(article['url']), "sim" : article['sim']})
+        uri_list.append({"url" : str(article['url']), "sim" : article['sim'], "content" : article['body']})
 
     sorted_urls =  sorted(uri_list, key = lambda art: art["sim"], reverse = True)
 
@@ -20,6 +20,6 @@ def format_results(sorted_list, limit):
     final_array = []
 
     for x in range(0, limit):
-        final_array.append(sorted_list[x]['url'])
+        final_array.append({"url" : sorted_list[x]['url'], "content" : sorted_list[x]['content']})
 
     return final_array

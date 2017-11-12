@@ -10,9 +10,9 @@ def doit(url_list):
 
     parameters = {}
     for index, item in enumerate(url_list):
-        parsed_uri = urlparse(item)
+        parsed_uri = urlparse(item['url'])
         domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
-        article_dict.append({"domain": domain, "url" : url_list[index]})
+        article_dict.append({"domain": domain, "url" : url_list[index]['url'], "content" : url_list[index]['content']})
         parameters['item' + str(index)] = domain
 
     parameters.update({'items': len(url_list)})
@@ -49,7 +49,7 @@ def doit(url_list):
         for trust_object in top_three:
             for x in range(0,len(url_list)):
                 if trust_object['domain'] == article_dict[x]['domain']:
-                    top_article_urls.append(article_dict[x]['url'])
+                    top_article_urls.append({"url" : article_dict[x]['url'], "content" : article_dict[x]['content']})
 
         return top_article_urls
 

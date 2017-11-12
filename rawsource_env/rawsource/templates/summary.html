@@ -7,9 +7,9 @@
     <h1>Here's the RAWSOURCE:</h1>
     <h2>{{searchterm}}</h2>
     <ul>
-        <li> {{article_0}} </li>
-        <li> {{article_1}} </li>
-        <li> {{article_2}} </li>
+     {% for point in summary %}
+      <li>{{point}}</li>
+     {% endfor %}
     </ul>
   </body>
 </html>
