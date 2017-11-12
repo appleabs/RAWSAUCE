@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="layout.css"/>
+</head>
+<body>
+<h1>Raw Source</h1>
+<p><b>RAW SOURCE</b> is a factual news hub.</p>
+<p>Simply enter a search term - the site will collate the top ten news articles on the subject and create a non-biased, factually accurate, and easy-to-read summary.</p>
+<form action="{{url_for('/searchforasummary')}}" method="post">
+Search for a summary <br>
+<input type="text" name="searchforasummary"</b>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
