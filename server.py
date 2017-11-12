@@ -8,4 +8,4 @@ def hello():
 
 @app.route("/searchforasummary", methods=['GET', 'POST'])
 def testing():
-    return render_template("summary.html", story=["lynx", "zoo", "shoot"], key_points="Shit got fucked")
+    return render_template("summary.html", searchterm=request.args.get("searchterm"), key_points="Shit got fucked")
