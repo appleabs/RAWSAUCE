@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="layout.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Raw Source</h1>
-<p><b>RAW SOURCE</b> is a factual news hub.</p>
-<p>Simply enter a search term - the site will collate the top ten news articles on the subject and create a non-biased, factually accurate, and easy-to-read summary.</p>
-<form action="/searchforasummary" method="post">
-Search for a summary <br>
-<input type="text" name="searchforasummary"</b>
-<input type="submit" value="Submit">
-</form>
+<div class="container">
+<br></br>
+<nav class="navbar fixed-top navbar-dark bg-primary">
+  <a class="navbar-brand" href="#!">Factual reporting</a>
+</nav>
+<div class ="row">
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#!">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#!">About</a>
+  </li>
+</ul>
+</div>
+<br></br>
+<div class="row">
+<h2><p class="text-center">Raw Source</p></h2>
+</div>
+<div class="row">
+<p class="text-center"><b>RAW SOURCE</b> is a factual news hub.</p>
+<p class="text-center">Simply enter a search term - the site will collate the top ten news articles on the subject and create a non-biased, factually accurate, and easy-to-read summary.</p>
+<p class="text-center"><br>Search for a summary </br>
+</div>
+<div class="row">
+<div class="col-sm-4">
+</div>
+<div class="col-sm-4">
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" placeholder="Search" type="text">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav></p>
+</div>
+</div>
+</div>
 </body>
 </html>

@@ -1,7 +1,11 @@
-* {background-color: pink;}
-  body {
+* {
+  background-color: pink;
+}
+body {
   width:1200px; /1200px/
   margin:0 auto; /*Centre content*/
-  } 
- 
-  
+}
+* nav{
+  margin:0 auto; 
+  width:250px;
+  }
